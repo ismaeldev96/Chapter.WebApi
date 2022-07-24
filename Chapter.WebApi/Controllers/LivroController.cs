@@ -1,5 +1,6 @@
 ﻿using Chapter.WebApi.Models;
 using Chapter.WebApi.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,8 @@ namespace Chapter.WebApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
+
+    [Authorize]
     public class LivroController : ControllerBase
     {
         private readonly LivroRepository _livroRepository;
@@ -48,6 +51,7 @@ namespace Chapter.WebApi.Controllers
             }
         }
 
+        [Authorize(Roles = "1, 2")]
         [HttpPost]
         public IActionResult Cadastrar(Livro livro)
         {
@@ -70,7 +74,7 @@ namespace Chapter.WebApi.Controllers
                 Livro livroBuscado = _livroRepository.BuscarId(id);
                 if (livroBuscado == null)
                 {
-                    return StatusCode(410);
+                    return BadRequest();
                 }
                 else
                 {
@@ -94,7 +98,7 @@ namespace Chapter.WebApi.Controllers
                 Livro livroBuscado = _livroRepository.BuscarId(id);
                 if (livroBuscado == null)
                 {
-                    return StatusCode(410);
+                    return BadRequest();
                 }
                 else
                 {

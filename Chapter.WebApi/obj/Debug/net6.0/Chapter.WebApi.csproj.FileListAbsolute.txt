@@ -57,3 +57,4 @@ C:\Users\Ismael\source\repos\Chapter.WebApi\Chapter.WebApi\obj\Debug\net6.0\refi
 C:\Users\Ismael\source\repos\Chapter.WebApi\Chapter.WebApi\obj\Debug\net6.0\Chapter.WebApi.pdb
 C:\Users\Ismael\source\repos\Chapter.WebApi\Chapter.WebApi\obj\Debug\net6.0\Chapter.WebApi.genruntimeconfig.cache
 C:\Users\Ismael\source\repos\Chapter.WebApi\Chapter.WebApi\obj\Debug\net6.0\ref\Chapter.WebApi.dll
+C:\Users\Ismael\source\repos\Chapter.WebApi\Chapter.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
